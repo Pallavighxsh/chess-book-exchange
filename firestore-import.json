@@ -1,0 +1,32 @@
+{
+  "books": [
+    {
+      "title": "Bobby Fischer Teaches Chess",
+      "author": "Bobby Fischer, Stuart Margulies, and Donn Mosenfelder",
+      "owner": "Pallavi",
+      "currentHolder": "Pallavi",
+      "status": "available"
+    },
+    {
+      "title": "The Chess Revolution",
+      "author": "Peter Doggers",
+      "owner": "Pallavi",
+      "currentHolder": "Pallavi",
+      "status": "available"
+    },
+    {
+      "title": "How Life Imitates Chess",
+      "author": "Garry Kasparov",
+      "owner": "Pallavi",
+      "currentHolder": "Ankit",
+      "status": "borrowed"
+    },
+    {
+      "title": "Logical Chess: Move by Move",
+      "author": "Irving Chernev",
+      "owner": "Pallavi",
+      "currentHolder": "Pallavi",
+      "status": "available"
+    }
+  ]
+}

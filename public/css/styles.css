@@ -1,0 +1,182 @@
+/* ---------- RESET ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- VARIABLES ---------- */
+:root {
+  --black: #000;
+  --white: #fff;
+  --hot-pink: #d7268a;
+  --soft-gray: #f5f5f5;
+}
+
+/* ---------- BASE ---------- */
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--white);
+  color: var(--black);
+}
+
+/* ---------- HEADER ---------- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 2px solid var(--black);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.menu a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--black);
+  padding-bottom: 4px;
+}
+
+.menu a.active {
+  border-bottom: 2px solid var(--hot-pink);
+}
+
+/* ---------- WRAPPER ---------- */
+.page-wrapper {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- HERO ---------- */
+.hero-card {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  padding: 24px;
+  border-radius: 18px;
+  background: var(--white);
+}
+
+/* Chess piece border */
+.chess-border {
+  border: 3px solid var(--black);
+}
+
+.chess-border::before {
+  content: "♜ ♞ ♝ ♛ ♚ ♝ ♞ ♜";
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  padding: 0 12px;
+  font-size: 1rem;
+}
+
+/* ---------- TITLE ---------- */
+.hero-title {
+  margin-bottom: 24px;
+  font-size: 1.6rem;
+  border-left: 6px solid var(--hot-pink);
+  padding-left: 12px;
+}
+
+/* ---------- GRID ---------- */
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* ---------- CARD ---------- */
+.book-card {
+  position: relative;
+  padding: 16px;
+  border-radius: 14px;
+  border: 2px solid var(--black);
+  background: var(--soft-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  animation: fadeUp 0.4s ease forwards;
+}
+
+/* Chess rhythm */
+.book-card:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Hover lift */
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 0 var(--hot-pink);
+}
+
+/* ---------- PIECE ---------- */
+.piece {
+  font-size: 1.4rem;
+  align-self: flex-end;
+}
+
+/* ---------- STATUS ---------- */
+.status {
+  margin-top: auto;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid var(--black);
+  width: fit-content;
+}
+
+/* Available */
+.status.available {
+  background: var(--white);
+}
+
+/* Borrowed */
+.status.borrowed {
+  background: var(--hot-pink);
+  color: var(--white);
+  border-color: var(--hot-pink);
+}
+
+/* Borrowed marker */
+.book-card.borrowed::after {
+  content: "♚";
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  color: var(--hot-pink);
+  font-size: 0.9rem;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+}

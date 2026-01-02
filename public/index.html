@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Chess Book Exchange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="logo">
+      ♕ Chess Book Exchange
+    </div>
+
+    <nav class="menu">
+      <a class="active" href="#">About</a>
+      <a href="#">Blog</a>
+      <a href="#">Get in Touch</a>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="page-wrapper">
+
+    <section class="hero-card chess-border">
+
+      <h1 class="hero-title">
+        ♕ Available Chess Books
+      </h1>
+
+      <!-- GRID (Firestore renders here) -->
+      <div class="books-grid" id="booksGrid"></div>
+
+    </section>
+
+  </main>
+
+  <!-- FIREBASE APP -->
+  <script type="module" src="/js/books-ui.js"></script>
+
+</body>
+</html>
